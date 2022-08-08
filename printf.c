@@ -11,12 +11,13 @@
 int _printf(const char *format, ...)
 {
 	va_list print;
-
 	int length = 0;
 
-	if (format == '\0')
+	if (format == NULL)
 		return (-1);
+
 	va_start(print, format);
+
 	length = _print_format(format, print);
 	va_end(print);
 	return (length);
