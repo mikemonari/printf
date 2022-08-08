@@ -10,15 +10,15 @@
 
 int _printf(const char *format, ...)
 {
-	va_list print;
+	va_list args;
 	int length = 0;
 
 	if (format == NULL)
 		return (-1);
 
-	va_start(print, format);
+	va_start(args, format);
 
-	length = _print_format(format, print);
-	va_end(print);
+	length = _print_format(format, args);
+	va_end(args);
 	return (length);
 }
