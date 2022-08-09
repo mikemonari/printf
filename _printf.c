@@ -21,5 +21,5 @@ int _printf(const char *format, ...)
 
 	length = _print_format(format, args);
 	va_end(args);
-	return (length);
+	return(length);
 }
